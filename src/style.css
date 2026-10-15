@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{font-family:Inter,ui-rounded,system-ui,Arial,sans-serif;color:#edf5ff;background:#050914;font-synthesis:none;text-rendering:optimizeLegibility;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;min-width:320px;min-height:100vh;background:linear-gradient(135deg,rgba(3,7,18,.86),rgba(8,16,36,.72)),url('/assets/images/background-outer.svg') center/cover fixed,#050914}#app{min-height:100vh;display:grid;place-items:center;padding:clamp(10px,3vw,30px)}.game-container{width:min(100%,1000px);padding:clamp(12px,2.6vw,28px);border:1px solid #ffffff25;border-radius:28px;background:linear-gradient(135deg,#ffffff12,#ffffff05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 28px 90px #0008,inset 0 1px #ffffff20}.game-heading{margin:0 0 20px;color:#b8f3ff;font-size:clamp(25px,4vw,38px);font-weight:900;letter-spacing:clamp(2px,.5vw,5px);text-align:center;text-shadow:0 0 25px #06b6d477}.panel{background:linear-gradient(135deg,#101a2cbb,#0a1222bb);border:1px solid #b8e7ff30;border-radius:22px;padding:clamp(18px,4vw,32px);box-shadow:0 18px 48px #0005,inset 0 1px #ffffff15;backdrop-filter:blur(20px);max-width:650px;margin:0 auto}.panel h2{text-align:center;margin:0 0 12px;color:#b8f3ff}.panel p{line-height:1.6;color:#c7d4e9;text-align:center}label{display:block;margin:14px 0 7px;color:#e1ebfb}input{width:100%;padding:14px 15px;border-radius:12px;border:1px solid #9bc9ed45;background:#020817b8;color:white;font:inherit;margin-bottom:12px;outline:none}input:focus{border-color:#67e8f9;box-shadow:0 0 0 3px #22d3ee20}button{border:1px solid #ffffff24;border-radius:12px;padding:12px 16px;background:linear-gradient(135deg,#1689b6,#2563eb);color:white;font:inherit;font-weight:750;cursor:pointer;box-shadow:0 6px 18px #02061780;transition:transform .15s,filter .15s;touch-action:manipulation;user-select:none}button:hover{filter:brightness(1.15);transform:translateY(-1px)}button:active{transform:translateY(1px)}button:disabled{opacity:.42;cursor:not-allowed;filter:saturate(.4)}.secondary{background:#ffffff0c;box-shadow:none;border-color:#ffffff24}.row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:12px}.hidden{display:none!important}#game-wrap{width:100%;padding:clamp(8px,2vw,16px);border:1px solid #ffffff25;border-radius:22px;background:#050a16a8;box-shadow:inset 0 1px #ffffff16,0 15px 45px #0005;backdrop-filter:blur(14px)}#game{width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid #9ee9ff70;border-radius:15px;box-shadow:0 0 35px #22d3ee18;background:#070d1b}#game canvas{display:block;width:100%!important;height:100%!important;object-fit:contain}.game-help{text-align:center;color:#aabbd4;font-size:13px;margin:12px 4px}.spellbar{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px}.spellbar button{background:linear-gradient(135deg,#4338a8,#1d4ed8)}#board-list{padding-left:28px;line-height:1.9}#board-list li{padding:5px 8px;border-bottom:1px solid #ffffff15;color:#e2eaf8}#lobby-message{text-align:center;color:#fde68a;margin-top:8px}#result-panel{text-align:center;margin-top:16px}.mobile-controls{display:none;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.move-pad{display:flex;gap:10px}.mobile-controls button{min-width:64px;min-height:56px;font-size:18px;background:#ffffff12;border:1px solid #ffffff35;box-shadow:inset 0 1px #ffffff12;touch-action:none}.mobile-controls .mobile-label{font-size:11px;color:#9fb1ca;text-align:center;align-self:center;flex:1}.mobile-controls .mobile-spells{display:flex;gap:8px}.mobile-controls .mobile-spells button{min-width:58px;font-size:12px}@media(max-width:600px){#app{padding:8px}.game-container{padding:12px;border-radius:20px}.game-heading{margin-bottom:14px}.panel{border-radius:17px}.game-help{font-size:11px}.mobile-controls{display:flex}.mobile-controls button{padding:8px}.spellbar{gap:5px}.spellbar button{flex:1;padding:10px 8px;font-size:12px}#quit-button{flex:1 0 100%}}
+/* Spell inventory: real transparent PNG artwork, readable charges and live duration. */
+.inventory-label{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:14px 2px 8px;color:#b9eefa;font-size:12px;font-weight:800;letter-spacing:.09em}.inventory-label span{font-size:12px;letter-spacing:0;color:#dbeafe;font-weight:600}.spellbar button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:150px;text-align:left}.spellbar button>span{display:flex;flex-direction:column;gap:2px}.spellbar button small{font-size:10px;font-weight:600;color:#dbeafe;opacity:.9}.spell-icon{display:inline-block;width:30px;height:30px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 2px 5px #02061780)}.mobile-spells button{display:flex;align-items:center;justify-content:center;gap:5px}.mobile-spells .spell-icon{width:23px;height:23px}.spellbar button:disabled,.mobile-spells button:disabled{opacity:.5}
+@media(max-width:600px){.inventory-label{font-size:10px}.inventory-label span{width:100%}.spellbar button{min-width:0;flex:1;padding:9px 7px;gap:6px}.spell-icon{width:25px;height:25px}.spellbar button small{font-size:9px}.mobile-spells button{flex-direction:column;gap:2px}}
+
+/* Viewport-fit layout: keep the full game HUD visible on desktop without page scrolling. */
+@media (min-width: 601px){
+  html,body{height:100%;min-height:0;overflow:hidden}
+  #app{height:100vh;height:100dvh;min-height:0;padding:10px 18px;place-items:stretch}
+  .game-container{width:min(100%,1500px);height:100%;min-height:0;margin:auto;padding:clamp(10px,1.5vh,16px) clamp(14px,2vw,26px);border-radius:26px;display:flex;flex-direction:column;overflow:hidden;}
+  .game-heading{flex:0 0 auto;font-size:clamp(23px,3.6vh,36px);line-height:1.05;margin:0 0 clamp(7px,1.2vh,12px);letter-spacing:clamp(2px,.4vw,5px)}
+  #game-wrap{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;padding:clamp(7px,1vh,12px);overflow:hidden}
+  #game{width:100%;height:auto;min-height:0;flex:1 1 auto;aspect-ratio:auto;border-radius:13px}
+  #game canvas{width:100%!important;height:100%!important;object-fit:contain}
+  .game-help{flex:0 0 auto;margin:6px 4px;font-size:12px;line-height:1.25}
+  .inventory-label{flex:0 0 auto;margin:5px 2px 5px;font-size:11px}
+  .inventory-label span{font-size:11px}
+  .spellbar{flex:0 0 auto;gap:8px}
+  .spellbar button{min-height:46px;padding:7px 12px;min-width:130px}
+  .spell-icon{width:25px;height:25px}
+  .spellbar button small{font-size:9px}
+  #quit-button{min-height:40px}
+}
+
+/* Mobile: compact stacked game, with thumb controls anchored to opposite screen edges. */
+@media (max-width:600px){
+  html,body{min-width:320px}
+  #app{min-height:100svh;padding:0;display:block}
+  .game-container{width:100%;min-height:100svh;margin:0;padding:8px 8px 12px;border-radius:0;}
+  .game-heading{font-size:clamp(20px,6vw,28px);margin:3px 0 9px;letter-spacing:2px}
+  #game-wrap{padding:6px;border-radius:14px}
+  #game{width:100%;aspect-ratio:16/9;border-radius:9px}
+  .game-help{margin:6px 2px;font-size:10px;line-height:1.35}
+  .inventory-label{margin:8px 2px 6px;font-size:10px;gap:4px}
+  .inventory-label span{width:auto;margin-left:auto;text-align:right;font-size:10px}
+  .spellbar{gap:5px}
+  .spellbar button{min-width:0;padding:8px 5px;gap:5px;font-size:12px}
+  .spellbar button small{font-size:9px}
+  #quit-button{flex:0 0 100%;}
+  .mobile-controls{display:flex;width:100%;justify-content:space-between;align-items:center;gap:0;margin:10px 0 0;padding:0;}
+  .move-pad{display:flex;gap:8px;margin-left:0;}
+  .mobile-controls .mobile-label{display:none}
+  .mobile-controls .mobile-spells{display:flex;gap:8px;margin-right:0;}
+  .mobile-controls button{min-width:56px;min-height:54px;padding:7px 8px;font-size:13px;border-radius:14px;}
+  .mobile-controls .mobile-spells button{min-width:58px;min-height:54px;flex-direction:column;gap:1px;font-size:10px;padding:4px 5px;}
+  .mobile-spells .spell-icon{width:21px;height:21px}
+}
+
+/* Mobile bottom navigation: only movement controls, anchored to both screen edges. */
+@media (max-width:600px){
+  .mobile-controls{justify-content:stretch;gap:0;width:100%;margin:10px 0 0;padding:0;}
+  .mobile-controls .move-pad{width:100%;display:flex;justify-content:space-between;align-items:center;gap:0;margin:0;}
+  .mobile-controls #move-left{margin-right:auto;}
+  .mobile-controls #move-right{margin-left:auto;}
+  .mobile-controls .mobile-label,
+  .mobile-controls .mobile-spells{display:none!important;}
+}

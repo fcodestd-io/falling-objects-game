@@ -1,0 +1,1 @@
+PNG assets are in public/assets/images/: player.png, coin.png, bomb.png.

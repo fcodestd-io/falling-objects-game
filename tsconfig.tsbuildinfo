@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/config/gameconfig.ts","./src/entities/fallingobject.ts","./src/entities/player.ts","./src/scenes/gamescene.ts","./src/systems/audiomanager.ts","./src/systems/levelmanager.ts","./src/types/game.ts"],"version":"5.9.3"}
